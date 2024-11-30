@@ -6,6 +6,8 @@ public class GameManager : MonoBehaviour
     public GameObject player;
     public GameObject particles;
 
+    public mischiefSystem mischiefSyst;
+    public objectiveSystem objectiveSyst;
 
     private void Awake()
     {

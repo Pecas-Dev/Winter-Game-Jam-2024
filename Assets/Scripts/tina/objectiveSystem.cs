@@ -7,14 +7,14 @@ using UnityEngine;
 
 public class objectiveSystem : MonoBehaviour
 {
-    public static objectiveSystem instance { get; private set; }
+    /*public static objectiveSystem instance { get; private set; }
     
 
     private void Awake()
     {
         if (instance != null && instance != this) { Destroy(this); }
         else { instance = this; }
-    }
+    }*/
 
     // 1 light the tree on fire
     // 2 steal a cat
