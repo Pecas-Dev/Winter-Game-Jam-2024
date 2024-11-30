@@ -34,16 +34,14 @@ public class objectiveSystem : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI[] objectiveText = new TextMeshProUGUI[3];
 
-    /*public enum objectives { ChristamsTree, Cat, Vases, Couch};
-    objectives objs;*/
+   /* public enum objectivesEnum { ChristamsTree, Cat, Vases, Couch, Carpets, Presents, Milk, Fridge, Toilet, Glogg};
+    objectivesEnum objEnum;*/
 
     void Start()
     {
         vaseCount = 0;
         carpetCount = 0;
         presentCount = 0;
-
-
 
         // if you change the string later on, rememebr to change it in all other scripts bcoz its string dependent
         objectivesList.Add(new obj { name = "Set Christmas Tree on fire", conditionMet = false });
