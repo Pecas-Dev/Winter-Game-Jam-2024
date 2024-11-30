@@ -5,8 +5,8 @@ public class PlayerMovement : MonoBehaviour
 {
     [Header("Movement Settings")]
     [SerializeField] float moveSpeed = 5f;
-    [SerializeField] float acceleration = 20f;
-    [SerializeField] float deceleration = 10f;
+    [SerializeField] float acceleration = 30f;
+    [SerializeField] float deceleration = 20f;
 
     [Header("References")]
     [SerializeField] GameInput gameInput;
@@ -43,17 +43,19 @@ public class PlayerMovement : MonoBehaviour
     void UpdateMovement()
     {
         Vector2 targetVelocity = movementInput.normalized * moveSpeed;
+        Vector2 velocityDifference = targetVelocity - currentVelocity;
 
-        float speedDifference = targetVelocity.magnitude - currentVelocity.magnitude;
+        bool isChangingDirection = Vector2.Dot(currentVelocity, targetVelocity) < 0f;
+
         float accelerationRate;
 
-        if (Mathf.Abs(speedDifference) > 0.01f)
+        if (isChangingDirection)
         {
-            accelerationRate = (speedDifference > 0) ? acceleration : deceleration;
+            accelerationRate = deceleration * 2f;
         }
         else
         {
-            accelerationRate = deceleration;
+            accelerationRate = (targetVelocity.magnitude > currentVelocity.magnitude) ? acceleration : deceleration;
         }
 
         currentVelocity = Vector2.MoveTowards(currentVelocity, targetVelocity, accelerationRate * Time.fixedDeltaTime);
