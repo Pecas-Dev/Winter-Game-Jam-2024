@@ -7,7 +7,6 @@ public class interactableObject : MonoBehaviour
     [SerializeField] private interactionZone interactionZone;
     [SerializeField] private Sprite changed;
 
-
     private bool interactable;
     private bool inOriginalState;
 
@@ -48,6 +47,8 @@ public class interactableObject : MonoBehaviour
     void InteractionChange()
     {
         string tag = gameObject.tag;
+        GameManager.instance.player.GetComponent<playerInteraction>().CauseParticles();
+
 
         if (tag == "Vase")
         {
