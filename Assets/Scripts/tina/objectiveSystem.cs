@@ -7,15 +7,6 @@ using UnityEngine;
 
 public class objectiveSystem : MonoBehaviour
 {
-    public static objectiveSystem instance { get; private set; }
-    
-
-    private void Awake()
-    {
-        if (instance != null && instance != this) { Destroy(this); }
-        else { instance = this; }
-    }
-
     // 1 light the tree on fire
     // 2 steal a cat
     // 3 destroy 3 vases
@@ -39,6 +30,7 @@ public class objectiveSystem : MonoBehaviour
     public int vaseCount;
     public int carpetCount;
     public int presentCount;
+    public int originalObjectivesAmount;
 
     [SerializeField] private TextMeshProUGUI[] objectiveText = new TextMeshProUGUI[3];
 
@@ -51,6 +43,8 @@ public class objectiveSystem : MonoBehaviour
         carpetCount = 0;
         presentCount = 0;
 
+
+
         // if you change the string later on, rememebr to change it in all other scripts bcoz its string dependent
         objectivesList.Add(new obj { name = "Set Christmas Tree on fire", conditionMet = false });
         objectivesList.Add(new obj { name = "Steal a cat", conditionMet = false });
@@ -62,6 +56,8 @@ public class objectiveSystem : MonoBehaviour
         objectivesList.Add(new obj { name = "Unplug the fridge", conditionMet = false });
         objectivesList.Add(new obj { name = "Clog the toilet", conditionMet = false });
         objectivesList.Add(new obj { name = "Chug all the Glögg", conditionMet = false });
+
+        originalObjectivesAmount = objectivesList.Count;
 
         // choose 3 random objectives, add them to the gameObjectives list and remove from objectivesList
         for (int i = 0; i < 3; i++)
@@ -86,11 +82,6 @@ public class objectiveSystem : MonoBehaviour
             objectiveText[i].text = text;
             objectivesList.Remove(objectivesList[random]);
         }
-
-        /*for (int i = 0; i < 3; i++)
-        {
-            Debug.Log(gameObjectives[i].name);
-        }*/
     }
 
     // destroy a vase, check if all vases have been destroyed & change conditionMet
@@ -98,18 +89,21 @@ public class objectiveSystem : MonoBehaviour
     {
         vaseCount++;
 
-        if (vaseCount == 3) 
+        for (int i = 0; i < gameObjectives.Count; i++)
         {
-            for (int i = 0; i < gameObjectives.Count; i++) 
-            { 
-                if (gameObjectives[i].name == "Destroy 3 vases")
+            if (gameObjectives[i].name == "Destroy 3 vases")
+            {
+                objectiveText[i].text = "Destroy 3 vases (" + vaseCount.ToString() + "/3)";
+                if (vaseCount == 3)
                 {
                     gameObjectives[i].conditionMet = true;
                     objectiveText[i].color = Color.green;
+
+                    if (CheckIfAllConditionsAreMet()) { GameManager.instance.GameWon(); }
                     return;
                 }
             }
-        }
+        }        
     }
 
     // stain a carpet, check if all carpets have been stained & change conditionMet
@@ -117,14 +111,17 @@ public class objectiveSystem : MonoBehaviour
     {
         carpetCount++;
 
-        if (carpetCount == 2)
+        for (int i = 0; i < gameObjectives.Count; i++)
         {
-            for (int i = 0; i < gameObjectives.Count; i++)
+            if (gameObjectives[i].name == "Stain 2 carpets")
             {
-                if (gameObjectives[i].name == "Stain 2 carpets")
+                objectiveText[i].text = "Stain 2 carpets (" + carpetCount.ToString() + "/2)";
+                if (carpetCount == 2)
                 {
                     gameObjectives[i].conditionMet = true;
                     objectiveText[i].color = Color.green;
+
+                    if (CheckIfAllConditionsAreMet()) { GameManager.instance.GameWon(); }
                     return;
                 }
             }
@@ -136,14 +133,18 @@ public class objectiveSystem : MonoBehaviour
     {
         presentCount++;
 
-        if (presentCount == 4)
+        for (int i = 0; i < gameObjectives.Count; i++)
         {
-            for (int i = 0; i < gameObjectives.Count; i++)
+            if (gameObjectives[i].name == "Steal 4 presents")
             {
-                if (gameObjectives[i].name == "Steal 4 presents")
+                objectiveText[i].text = "Steal 4 presents (" + presentCount.ToString() + "/4)"; 
+                if (presentCount == 4)
                 {
                     gameObjectives[i].conditionMet = true;
+
                     objectiveText[i].color = Color.green;
+
+                    if (CheckIfAllConditionsAreMet()) { GameManager.instance.GameWon(); }
                     return;
                 }
             }
@@ -162,7 +163,8 @@ public class objectiveSystem : MonoBehaviour
             {
                 gameObjectives[i].conditionMet = true;
                 objectiveText[i].color = Color.green;
-                Debug.Log(objectiveName + " finished");
+                
+                if (CheckIfAllConditionsAreMet()) { GameManager.instance.GameWon(); }
                 return;
             }
         }
@@ -181,8 +183,4 @@ public class objectiveSystem : MonoBehaviour
         return true;
     }
     
-    void Update()
-    {
-        
-    }
 }
