@@ -5,11 +5,11 @@ using UnityEngine.UI;
 public class GameLoadTransition : MonoBehaviour
 {
     [Header("Fade Settings")]
-    [SerializeField] float fadeDuration = 1.0f;
+    [SerializeField] float delayBeforeFade = 1.5f; 
+    [SerializeField] float fadeDuration = 1.0f;    
 
     [Header("References")]
     [SerializeField] Image fadeImage;
-
 
     void Start()
     {
@@ -31,15 +31,17 @@ public class GameLoadTransition : MonoBehaviour
 
     IEnumerator FadeOutCoroutine()
     {
+        yield return new WaitForSecondsRealtime(delayBeforeFade);
+
         Color startColor = fadeImage.color;
         Color endColor = fadeImage.color;
-        endColor.a = 0f;
+        endColor.a = 0f; 
 
         float elapsedTime = 0f;
 
         while (elapsedTime < fadeDuration)
         {
-            elapsedTime += Time.unscaledDeltaTime;
+            elapsedTime += Time.unscaledDeltaTime; 
             float alpha = Mathf.Clamp01(elapsedTime / fadeDuration);
             fadeImage.color = Color.Lerp(startColor, endColor, alpha);
             yield return null;
