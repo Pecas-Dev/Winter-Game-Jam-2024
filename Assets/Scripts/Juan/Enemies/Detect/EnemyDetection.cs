@@ -4,11 +4,12 @@ using UnityEngine;
 public class EnemyDetection : MonoBehaviour
 {
     [Header("Field of View Settings")]
-    public float viewRadius = 5f;
-    [Range(0, 360)] public float viewAngle = 90f;
+    [SerializeField] float viewRadius = 5f;
+    [SerializeField][Range(0, 360)] float viewAngle = 90f;
+    [SerializeField] LayerMask targetMask;
 
-    public LayerMask targetMask;      // Layer mask for detecting the player
-    //public LayerMask obstructionMask; // Layer mask for obstacles (e.g., walls)
+
+    //public LayerMask obstructionMask; // Layer mask for obstacles in case it is possible to add it later for hiding mechanics
 
 
     EnemyMovement enemyMovement;

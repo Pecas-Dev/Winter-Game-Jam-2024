@@ -11,6 +11,9 @@ public class PlayerMovement : MonoBehaviour
     [Header("References")]
     [SerializeField] GameInput gameInput;
 
+    [Header("Isometric Settings")]
+    [SerializeField] float isometricAngle = 45f;
+
 
     bool isWalking = false;
 
@@ -82,7 +85,7 @@ public class PlayerMovement : MonoBehaviour
 
     Vector2 AdjustInputForIsometric(Vector2 input)
     {
-        float angle = -45f * Mathf.Deg2Rad;
+        float angle = -isometricAngle * Mathf.Deg2Rad;
         float sin = Mathf.Sin(angle);
         float cos = Mathf.Cos(angle);
 

@@ -6,13 +6,19 @@ public class EnemyPatrol : MonoBehaviour
     [Header("Patrol Settings")]
     [SerializeField] float minTimeToWait = 2.5f;
     [SerializeField] float maxTimeToWait = 4.0f;
+
+
     public float waitTimeAtNode = 1f;
     public Transform[] moveNodes;
 
+
     EnemyMovement enemyMovement;
 
+
     int currentNodeIndex;
+
     float waitTime;
+
 
     void Awake()
     {

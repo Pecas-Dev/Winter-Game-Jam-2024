@@ -4,9 +4,9 @@ using UnityEngine;
 public class EnemyMovement : MonoBehaviour
 {
     [Header("Movement Settings")]
-    public float moveSpeed = 3f;
-    public float acceleration = 20f;
-    public float deceleration = 10f;
+    [SerializeField] float moveSpeed = 3f;
+    [SerializeField] float acceleration = 20f;
+    [SerializeField] float deceleration = 10f;
 
 
     Rigidbody2D enemyRigidbody;
