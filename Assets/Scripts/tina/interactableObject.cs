@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class interactableObject : MonoBehaviour
@@ -13,10 +14,33 @@ public class interactableObject : MonoBehaviour
     [Header("Test Variables")]
     public string state;
 
+
+    GameInput gameInput;
+
+
     void Awake()
     {
         interactionText.SetActive(false);
         inOriginalState = true;
+
+        gameInput = FindAnyObjectByType<GameInput>();
+
+        if (gameInput != null)
+        {
+            gameInput.OnInteractPerformed += OnInteractAction;
+        }
+        else
+        {
+            Debug.LogWarning("GameInput not found in the scene.");
+        }
+    }
+
+    void OnDestroy()
+    {
+        if (gameInput != null)
+        {
+            gameInput.OnInteractPerformed -= OnInteractAction;
+        }
     }
 
     void Update()
@@ -29,12 +53,6 @@ public class interactableObject : MonoBehaviour
             if (inOriginalState == true)
             {
                 interactionText.SetActive(true);
-
-                if (Input.GetKeyDown(KeyCode.E))
-                {
-                    inOriginalState = false;
-                    InteractionChange();
-                }
             }
         } else
         {
@@ -43,6 +61,14 @@ public class interactableObject : MonoBehaviour
         }
     }
 
+    void OnInteractAction()
+    {
+        if (interactable && inOriginalState)
+        {
+            inOriginalState = false;
+            InteractionChange();
+        }
+    }
 
     void InteractionChange()
     {

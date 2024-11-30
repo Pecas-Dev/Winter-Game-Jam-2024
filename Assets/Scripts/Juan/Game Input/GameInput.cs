@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -7,12 +8,17 @@ public class GameInput : MonoBehaviour
 
     public Vector2 MovementInput { get; private set; }
 
+    public event Action OnInteractPerformed;
+
+
     void Awake()
     {
         inputActions = new InputSystem_Actions();
 
         inputActions.Player.Move.performed += OnMovePerformed;
         inputActions.Player.Move.canceled += OnMoveCanceled;
+
+        inputActions.Player.Interact.performed += OnInteractPerformedCallback;
     }
 
     void OnEnable()
@@ -29,6 +35,8 @@ public class GameInput : MonoBehaviour
     {
         inputActions.Player.Move.performed -= OnMovePerformed;
         inputActions.Player.Move.canceled -= OnMoveCanceled;
+
+        inputActions.Player.Interact.performed -= OnInteractPerformedCallback;
     }
 
     void OnMovePerformed(InputAction.CallbackContext context)
@@ -39,5 +47,10 @@ public class GameInput : MonoBehaviour
     void OnMoveCanceled(InputAction.CallbackContext context)
     {
         MovementInput = Vector2.zero;
+    }
+
+    void OnInteractPerformedCallback(InputAction.CallbackContext context)
+    {
+        OnInteractPerformed?.Invoke();
     }
 }
