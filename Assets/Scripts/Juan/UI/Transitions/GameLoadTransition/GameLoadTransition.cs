@@ -41,7 +41,7 @@ public class GameLoadTransition : MonoBehaviour
 
         while (elapsedTime < fadeDuration)
         {
-            elapsedTime += Time.unscaledDeltaTime; 
+            elapsedTime += Time.deltaTime; 
             float alpha = Mathf.Clamp01(elapsedTime / fadeDuration);
             fadeImage.color = Color.Lerp(startColor, endColor, alpha);
             yield return null;
