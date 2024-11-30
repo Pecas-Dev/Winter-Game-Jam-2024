@@ -5,7 +5,7 @@ public class interactableObject : MonoBehaviour
     [Header("Interaction")]
     [SerializeField] private GameObject interactionText;
     [SerializeField] private interactionZone interactionZone;
-    [SerializeField] private Sprite changed;
+    [SerializeField] private Item itemChar;
 
     private bool interactable;
     private bool inOriginalState;
@@ -13,13 +13,12 @@ public class interactableObject : MonoBehaviour
     [Header("Test Variables")]
     public string state;
 
-    void Start()
+    void Awake()
     {
         interactionText.SetActive(false);
         inOriginalState = true;
     }
 
-    // Update is called once per frame
     void Update()
     {
         interactable = interactionZone.isInteractedWith;
@@ -44,7 +43,23 @@ public class interactableObject : MonoBehaviour
         }
     }
 
+
     void InteractionChange()
+    {
+        itemChar.interaction();
+        GameManager.instance.player.GetComponent<playerInteraction>().CauseParticles();
+
+        if (itemChar.disappear == true)
+        {
+            gameObject.SetActive(false);
+        }
+        if (itemChar.changeState == true)
+        {
+            gameObject.GetComponent<SpriteRenderer>().sprite = itemChar.changed;
+        }
+    }
+
+    /*void InteractionChange()
     {
         string tag = gameObject.tag;
         GameManager.instance.player.GetComponent<playerInteraction>().CauseParticles();
@@ -118,5 +133,5 @@ public class interactableObject : MonoBehaviour
             return;
         }
      
-    }
+    }*/
 }

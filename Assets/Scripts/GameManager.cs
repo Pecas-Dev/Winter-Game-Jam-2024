@@ -15,4 +15,9 @@ public class GameManager : MonoBehaviour
         else { instance = this; }
     }
 
+    public void GameWon()
+    {
+        Debug.Log("oh yeah game won");
+    }
+
 }
