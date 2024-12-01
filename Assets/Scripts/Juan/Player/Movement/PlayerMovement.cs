@@ -22,8 +22,8 @@ public class PlayerMovement : MonoBehaviour
 
 
     Vector2 movementInput;
-    Vector2 currentVelocity;
 
+    public Vector2 currentVelocity;
     public Vector2 MovementInput => movementInput;
 
     void Awake()

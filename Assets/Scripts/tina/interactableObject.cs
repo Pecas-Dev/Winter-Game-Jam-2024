@@ -23,7 +23,7 @@ public class interactableObject : MonoBehaviour
         interactionText.SetActive(false);
         inOriginalState = true;
 
-        gameInput = FindAnyObjectByType<GameInput>();
+        gameInput = FindFirstObjectByType<GameInput>();
 
         if (gameInput != null)
         {
@@ -54,7 +54,8 @@ public class interactableObject : MonoBehaviour
             {
                 interactionText.SetActive(true);
             }
-        } else
+        }
+        else
         {
             interactionText.SetActive(false);
             state = "not interacting";

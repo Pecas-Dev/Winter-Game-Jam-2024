@@ -259,6 +259,7 @@ MonoBehaviour:
   interactionZone: {fileID: 1736191680}
   itemChar: {fileID: 11400000, guid: 5bf0ca4b1c884b14c9a91de82f23dc98, type: 2}
   state: 
+  gameInput: {fileID: 70417604}
 --- !u!212 &46532174
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -428,6 +429,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1082730251}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &70417604 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1330261976546940982, guid: 915c276ce4e3766409826042a5afcdf6, type: 3}
+  m_PrefabInstance: {fileID: 1245184802}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f3d9c70c1f11f64db702ce0d483171b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &92535786
 GameObject:
   m_ObjectHideFlags: 0
@@ -840,6 +852,7 @@ MonoBehaviour:
   interactionZone: {fileID: 355052053}
   itemChar: {fileID: 11400000, guid: 5aa06fb0e3dd17f49b934ffcc614f5f3, type: 2}
   state: 
+  gameInput: {fileID: 70417604}
 --- !u!212 &290054732
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1130,6 +1143,7 @@ MonoBehaviour:
   interactionZone: {fileID: 557012821}
   itemChar: {fileID: 11400000, guid: 6b9a4b2185e6c36469f036d29cc5b0b6, type: 2}
   state: 
+  gameInput: {fileID: 70417604}
 --- !u!212 &338440908
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1333,6 +1347,7 @@ MonoBehaviour:
   interactionZone: {fileID: 1267570383}
   itemChar: {fileID: 11400000, guid: 5bf0ca4b1c884b14c9a91de82f23dc98, type: 2}
   state: 
+  gameInput: {fileID: 70417604}
 --- !u!212 &364570416
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1439,6 +1454,7 @@ MonoBehaviour:
   interactionZone: {fileID: 1223843869}
   itemChar: {fileID: 11400000, guid: 66c8acb8eb1a4604ab325fa512e193b4, type: 2}
   state: 
+  gameInput: {fileID: 70417604}
 --- !u!212 &385321788
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1545,6 +1561,7 @@ MonoBehaviour:
   interactionZone: {fileID: 259847038}
   itemChar: {fileID: 11400000, guid: 5aa06fb0e3dd17f49b934ffcc614f5f3, type: 2}
   state: 
+  gameInput: {fileID: 70417604}
 --- !u!212 &399664859
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2318,6 +2335,7 @@ MonoBehaviour:
   interactionZone: {fileID: 335937367}
   itemChar: {fileID: 11400000, guid: 5aa06fb0e3dd17f49b934ffcc614f5f3, type: 2}
   state: 
+  gameInput: {fileID: 70417604}
 --- !u!212 &641952182
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2695,6 +2713,7 @@ MonoBehaviour:
   interactionZone: {fileID: 1800490609}
   itemChar: {fileID: 11400000, guid: 746a1205e2c533e45ae861acc9b3ce8d, type: 2}
   state: 
+  gameInput: {fileID: 70417604}
 --- !u!212 &758070983
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2898,6 +2917,7 @@ MonoBehaviour:
   interactionZone: {fileID: 840376150}
   itemChar: {fileID: 11400000, guid: 47270bf94463ad641875912259873d4f, type: 2}
   state: 
+  gameInput: {fileID: 70417604}
 --- !u!212 &851508568
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3091,6 +3111,7 @@ MonoBehaviour:
   interactionZone: {fileID: 1127730450}
   itemChar: {fileID: 11400000, guid: 92f37c788778edc48a9c4f90523070b1, type: 2}
   state: 
+  gameInput: {fileID: 70417604}
 --- !u!212 &922227560
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3284,6 +3305,7 @@ MonoBehaviour:
   interactionZone: {fileID: 62102639}
   itemChar: {fileID: 11400000, guid: 66c8acb8eb1a4604ab325fa512e193b4, type: 2}
   state: 
+  gameInput: {fileID: 70417604}
 --- !u!212 &1082730250
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3487,6 +3509,7 @@ MonoBehaviour:
   interactionZone: {fileID: 1389073120}
   itemChar: {fileID: 11400000, guid: 6433ab5aed258a945ba180f5e4c65ed1, type: 2}
   state: 
+  gameInput: {fileID: 70417604}
 --- !u!212 &1204351978
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3777,6 +3800,7 @@ MonoBehaviour:
   interactionZone: {fileID: 186948298}
   itemChar: {fileID: 11400000, guid: 5bf0ca4b1c884b14c9a91de82f23dc98, type: 2}
   state: 
+  gameInput: {fileID: 70417604}
 --- !u!212 &1239779150
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4308,6 +4332,7 @@ MonoBehaviour:
   interactionZone: {fileID: 1875547358}
   itemChar: {fileID: 11400000, guid: 5aa06fb0e3dd17f49b934ffcc614f5f3, type: 2}
   state: 
+  gameInput: {fileID: 70417604}
 --- !u!212 &1392073217
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5124,6 +5149,7 @@ MonoBehaviour:
   interactionZone: {fileID: 674375007}
   itemChar: {fileID: 11400000, guid: cf4de1ce32e9472439bc1e5ae0c5bc85, type: 2}
   state: 
+  gameInput: {fileID: 70417604}
 --- !u!212 &1654914781
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5746,6 +5772,7 @@ MonoBehaviour:
   interactionZone: {fileID: 92535787}
   itemChar: {fileID: 11400000, guid: 2e162aa3d16e18242a7d9de4013661e1, type: 2}
   state: 
+  gameInput: {fileID: 70417604}
 --- !u!212 &1930868175
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6336,6 +6363,7 @@ MonoBehaviour:
   interactionZone: {fileID: 511038591}
   itemChar: {fileID: 11400000, guid: d1798224595f1ce44a098dbb76c3bb42, type: 2}
   state: 
+  gameInput: {fileID: 70417604}
 --- !u!212 &2069621315
 SpriteRenderer:
   m_ObjectHideFlags: 0

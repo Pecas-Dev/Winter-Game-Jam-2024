@@ -10,15 +10,22 @@ public class PlayerAnimator : MonoBehaviour
     [Header("References")]
     [SerializeField] PlayerMovement playerMovement;
 
+
+    SpriteRenderer spriteRenderer;
     Animator animator;
+
+
+    float lastHorizontalDirection = 1f;
+
 
     void Awake()
     {
         animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
 
         if (playerMovement == null)
         {
-            playerMovement = GetComponent<PlayerMovement>();
+            playerMovement = GetComponentInParent<PlayerMovement>();
         }
     }
 
@@ -38,5 +45,24 @@ public class PlayerAnimator : MonoBehaviour
         animator.SetFloat(F_PLAYER_HORIZONTAL, normalizedInput.x);
         animator.SetFloat(F_PLAYER_VERTICAL, normalizedInput.y);
         animator.SetFloat(F_PLAYER_SPEED, speed);
+
+        if (speed > 0.01f && Mathf.Abs(normalizedInput.x) > 0.01f)
+        {
+            lastHorizontalDirection = Mathf.Sign(normalizedInput.x);
+        }
+
+        HandleSpriteFlip(speed);
+    }
+
+    void HandleSpriteFlip(float speed)
+    {
+        if (speed < 0.01f) 
+        {
+            spriteRenderer.flipX = lastHorizontalDirection < 0f;
+        }
+        else
+        {
+            spriteRenderer.flipX = false;
+        }
     }
 }
