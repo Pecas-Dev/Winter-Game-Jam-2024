@@ -1827,6 +1827,7 @@ MonoBehaviour:
   particles: {fileID: 3808307328988511519, guid: a8fc4292825303040b8922eef76375d1, type: 3}
   mischiefSyst: {fileID: 877187331}
   objectiveSyst: {fileID: 877187332}
+  gameSceneManager: {fileID: 0}
 --- !u!1 &917180634
 GameObject:
   m_ObjectHideFlags: 0
@@ -3919,7 +3920,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9087069937358867170, guid: 58b65652facb45b4397b342d6bacf89e, type: 3}
       propertyPath: startingTime
-      value: 10
+      value: 80
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
