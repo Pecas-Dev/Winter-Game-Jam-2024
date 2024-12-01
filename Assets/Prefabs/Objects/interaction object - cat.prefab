@@ -98,6 +98,7 @@ GameObject:
   - component: {fileID: 8932687286403675667}
   - component: {fileID: 2754425519106585131}
   - component: {fileID: 4834329346367899442}
+  - component: {fileID: 3869872019070617043}
   m_Layer: 0
   m_Name: interaction object - cat
   m_TagString: ChristmasTree
@@ -165,13 +166,13 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
-  m_Sprite: {fileID: 5962689061485224524, guid: ab25f3f060702b844bca001221b9a825, type: 3}
+  m_SortingOrder: -3
+  m_Sprite: {fileID: 21300000, guid: 8e158bd32774b8a4f90c8bb88511bd0f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 9, y: 9.8}
+  m_Size: {x: 2.05, y: 1.95}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -193,6 +194,28 @@ MonoBehaviour:
   interactionZone: {fileID: 2457990739397498202}
   itemChar: {fileID: 11400000, guid: 6433ab5aed258a945ba180f5e4c65ed1, type: 2}
   state: 
+--- !u!95 &3869872019070617043
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5612336467709868636}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fdc3182fbbf22a145945e4ea151dc906, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &5646302092339939580
 GameObject:
   m_ObjectHideFlags: 0
@@ -285,8 +308,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0, y: 1}
-      - {x: -9.435319, y: -4.6807146}
-      - {x: 0.250647, y: -10.712989}
-      - {x: 9.22925, y: -5.0646763}
+    - - {x: 1.8469533, y: 1.430762}
+      - {x: -0.15888965, y: 1.6611353}
+      - {x: -1.9865596, y: -0.030575514}
+      - {x: -0.69004554, y: -1.5361986}
+      - {x: 1.3934114, y: -1.2116227}
+      - {x: 2.462848, y: -0.38801563}
   m_UseDelaunayMesh: 0
