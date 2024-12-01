@@ -312,7 +312,6 @@ MonoBehaviour:
   interactionZone: {fileID: 1736191680}
   itemChar: {fileID: 11400000, guid: 5bf0ca4b1c884b14c9a91de82f23dc98, type: 2}
   state: 
-  gameInput: {fileID: 70417604}
 --- !u!212 &46532174
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -482,17 +481,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1082730251}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &70417604 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1330261976546940982, guid: 915c276ce4e3766409826042a5afcdf6, type: 3}
-  m_PrefabInstance: {fileID: 1245184802}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f3d9c70c1f11f64db702ce0d483171b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &92535786
 GameObject:
   m_ObjectHideFlags: 0
@@ -905,7 +893,6 @@ MonoBehaviour:
   interactionZone: {fileID: 355052053}
   itemChar: {fileID: 11400000, guid: 5aa06fb0e3dd17f49b934ffcc614f5f3, type: 2}
   state: 
-  gameInput: {fileID: 70417604}
 --- !u!212 &290054732
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1196,7 +1183,6 @@ MonoBehaviour:
   interactionZone: {fileID: 557012821}
   itemChar: {fileID: 11400000, guid: 6b9a4b2185e6c36469f036d29cc5b0b6, type: 2}
   state: 
-  gameInput: {fileID: 70417604}
 --- !u!212 &338440908
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1400,7 +1386,6 @@ MonoBehaviour:
   interactionZone: {fileID: 1267570383}
   itemChar: {fileID: 11400000, guid: 5bf0ca4b1c884b14c9a91de82f23dc98, type: 2}
   state: 
-  gameInput: {fileID: 70417604}
 --- !u!212 &364570416
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1507,7 +1492,6 @@ MonoBehaviour:
   interactionZone: {fileID: 1223843869}
   itemChar: {fileID: 11400000, guid: 66c8acb8eb1a4604ab325fa512e193b4, type: 2}
   state: 
-  gameInput: {fileID: 70417604}
 --- !u!212 &385321788
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1614,7 +1598,6 @@ MonoBehaviour:
   interactionZone: {fileID: 259847038}
   itemChar: {fileID: 11400000, guid: 5aa06fb0e3dd17f49b934ffcc614f5f3, type: 2}
   state: 
-  gameInput: {fileID: 70417604}
 --- !u!212 &399664859
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2390,7 +2373,6 @@ MonoBehaviour:
   interactionZone: {fileID: 335937367}
   itemChar: {fileID: 11400000, guid: 5aa06fb0e3dd17f49b934ffcc614f5f3, type: 2}
   state: 
-  gameInput: {fileID: 70417604}
 --- !u!212 &641952182
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2768,7 +2750,6 @@ MonoBehaviour:
   interactionZone: {fileID: 1800490609}
   itemChar: {fileID: 11400000, guid: 746a1205e2c533e45ae861acc9b3ce8d, type: 2}
   state: 
-  gameInput: {fileID: 70417604}
 --- !u!212 &758070983
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2840,6 +2821,90 @@ Transform:
   - {fileID: 1905767517}
   - {fileID: 1800490611}
   m_Father: {fileID: 914403}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &802281014
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 802281016}
+  - component: {fileID: 802281015}
+  m_Layer: 3
+  m_Name: Global Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &802281015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 802281014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ComponentVersion: 2
+  m_LightType: 4
+  m_BlendStyleIndex: 0
+  m_FalloffIntensity: 0.5
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 1
+  m_LightVolumeIntensity: 1
+  m_LightVolumeEnabled: 0
+  m_ApplyToSortingLayers: 00000000
+  m_LightCookieSprite: {fileID: 0}
+  m_DeprecatedPointLightCookieSprite: {fileID: 0}
+  m_LightOrder: 0
+  m_AlphaBlendOnOverlap: 0
+  m_OverlapOperation: 0
+  m_NormalMapDistance: 3
+  m_NormalMapQuality: 2
+  m_UseNormalMap: 0
+  m_ShadowsEnabled: 1
+  m_ShadowIntensity: 0.75
+  m_ShadowSoftness: 0.3
+  m_ShadowSoftnessFalloffIntensity: 0.5
+  m_ShadowVolumeIntensityEnabled: 0
+  m_ShadowVolumeIntensity: 0.75
+  m_LocalBounds:
+    m_Center: {x: 0, y: -0.00000011920929, z: 0}
+    m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
+  m_PointLightInnerAngle: 360
+  m_PointLightOuterAngle: 360
+  m_PointLightInnerRadius: 0
+  m_PointLightOuterRadius: 1
+  m_ShapeLightParametricSides: 5
+  m_ShapeLightParametricAngleOffset: 0
+  m_ShapeLightParametricRadius: 1
+  m_ShapeLightFalloffSize: 0.5
+  m_ShapeLightFalloffOffset: {x: 0, y: 0}
+  m_ShapePath:
+  - {x: -0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: 0.5, z: 0}
+  - {x: -0.5, y: 0.5, z: 0}
+--- !u!4 &802281016
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 802281014}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.12079549, y: 2.3840313, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &840376149
 GameObject:
@@ -2972,7 +3037,6 @@ MonoBehaviour:
   interactionZone: {fileID: 840376150}
   itemChar: {fileID: 11400000, guid: 47270bf94463ad641875912259873d4f, type: 2}
   state: 
-  gameInput: {fileID: 70417604}
 --- !u!212 &851508568
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3166,7 +3230,6 @@ MonoBehaviour:
   interactionZone: {fileID: 1127730450}
   itemChar: {fileID: 11400000, guid: 92f37c788778edc48a9c4f90523070b1, type: 2}
   state: 
-  gameInput: {fileID: 70417604}
 --- !u!212 &922227560
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3435,7 +3498,6 @@ MonoBehaviour:
   interactionZone: {fileID: 62102639}
   itemChar: {fileID: 11400000, guid: 66c8acb8eb1a4604ab325fa512e193b4, type: 2}
   state: 
-  gameInput: {fileID: 70417604}
 --- !u!212 &1082730250
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3639,7 +3701,6 @@ MonoBehaviour:
   interactionZone: {fileID: 1389073120}
   itemChar: {fileID: 11400000, guid: 6433ab5aed258a945ba180f5e4c65ed1, type: 2}
   state: 
-  gameInput: {fileID: 70417604}
 --- !u!212 &1204351978
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3930,7 +3991,6 @@ MonoBehaviour:
   interactionZone: {fileID: 186948298}
   itemChar: {fileID: 11400000, guid: 5bf0ca4b1c884b14c9a91de82f23dc98, type: 2}
   state: 
-  gameInput: {fileID: 70417604}
 --- !u!212 &1239779150
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4462,7 +4522,6 @@ MonoBehaviour:
   interactionZone: {fileID: 1875547358}
   itemChar: {fileID: 11400000, guid: 5aa06fb0e3dd17f49b934ffcc614f5f3, type: 2}
   state: 
-  gameInput: {fileID: 70417604}
 --- !u!212 &1392073217
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5279,7 +5338,6 @@ MonoBehaviour:
   interactionZone: {fileID: 674375007}
   itemChar: {fileID: 11400000, guid: cf4de1ce32e9472439bc1e5ae0c5bc85, type: 2}
   state: 
-  gameInput: {fileID: 70417604}
 --- !u!212 &1654914781
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5902,7 +5960,6 @@ MonoBehaviour:
   interactionZone: {fileID: 92535787}
   itemChar: {fileID: 11400000, guid: 2e162aa3d16e18242a7d9de4013661e1, type: 2}
   state: 
-  gameInput: {fileID: 70417604}
 --- !u!212 &1930868175
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6493,7 +6550,6 @@ MonoBehaviour:
   interactionZone: {fileID: 511038591}
   itemChar: {fileID: 11400000, guid: d1798224595f1ce44a098dbb76c3bb42, type: 2}
   state: 
-  gameInput: {fileID: 70417604}
 --- !u!212 &2069621315
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6750,3 +6806,4 @@ SceneRoots:
   - {fileID: 571381078}
   - {fileID: 559426574}
   - {fileID: 1245184802}
+  - {fileID: 802281016}

@@ -220,6 +220,7 @@ GameObject:
   - component: {fileID: 4806451049379016120}
   - component: {fileID: 6511353178832511599}
   - component: {fileID: 38575119833906828}
+  - component: {fileID: 2784159431303038605}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -326,3 +327,15 @@ MonoBehaviour:
   gameInput: {fileID: 1330261976546940982, guid: 915c276ce4e3766409826042a5afcdf6, type: 3}
   isometricAngle: 45
   currentVelocity: {x: 0, y: 0}
+--- !u!114 &2784159431303038605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4636862205353044088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 116510fd5a58eaf41bbc292432807906, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

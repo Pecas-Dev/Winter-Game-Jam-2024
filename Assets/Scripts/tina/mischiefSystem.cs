@@ -18,6 +18,6 @@ public class mischiefSystem : MonoBehaviour
 
     void Update()
     {
-        pointsText.text = "Mischief points: " + pointCount.ToString();
+        pointsText.text = "$: " + pointCount.ToString();
     }
 }
