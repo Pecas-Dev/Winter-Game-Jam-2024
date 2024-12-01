@@ -9,6 +9,7 @@ public class GameInput : MonoBehaviour
     public Vector2 MovementInput { get; private set; }
 
     public event Action OnInteractPerformed;
+    public event Action OnInventoryPerformed;
 
 
     void Awake()
@@ -19,6 +20,8 @@ public class GameInput : MonoBehaviour
         inputActions.Player.Move.canceled += OnMoveCanceled;
 
         inputActions.Player.Interact.performed += OnInteractPerformedCallback;
+
+        inputActions.Player.Inventory.performed += OnInventoryPerformedCallback;
     }
 
     void OnEnable()
@@ -37,6 +40,7 @@ public class GameInput : MonoBehaviour
         inputActions.Player.Move.canceled -= OnMoveCanceled;
 
         inputActions.Player.Interact.performed -= OnInteractPerformedCallback;
+        inputActions.Player.Inventory.performed -= OnInventoryPerformedCallback;
     }
 
     void OnMovePerformed(InputAction.CallbackContext context)
@@ -52,5 +56,10 @@ public class GameInput : MonoBehaviour
     void OnInteractPerformedCallback(InputAction.CallbackContext context)
     {
         OnInteractPerformed?.Invoke();
+    }
+
+    private void OnInventoryPerformedCallback(InputAction.CallbackContext context)
+    {
+        OnInventoryPerformed?.Invoke();
     }
 }
