@@ -76,11 +76,14 @@ public class interactableObject : MonoBehaviour
         itemChar.interaction();
         GameManager.instance.player.GetComponent<playerInteraction>().CauseParticles();
 
-        if (itemChar.disappear == true)
+        // Make noise at the interaction position
+        NoiseManager.MakeNoise(transform.position);
+
+        if (itemChar.disappear)
         {
             gameObject.SetActive(false);
         }
-        if (itemChar.changeState == true)
+        if (itemChar.changeState)
         {
             gameObject.GetComponent<SpriteRenderer>().sprite = itemChar.changed;
         }
