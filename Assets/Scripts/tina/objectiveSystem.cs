@@ -79,6 +79,7 @@ public class objectiveSystem : MonoBehaviour
         objectivesList.Add(new obj { name = "Unplug the fridge", conditionMet = false });
         objectivesList.Add(new obj { name = "Clog the toilet", conditionMet = false });
         objectivesList.Add(new obj { name = "Chug all the Glögg", conditionMet = false });
+        objectivesList.Add(new obj { name = "Steal the shoes", conditionMet = false });
 
         originalObjectivesAmount = objectivesList.Count;
 
