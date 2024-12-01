@@ -6,17 +6,15 @@ public class PlayerAnimator : MonoBehaviour
     const string F_PLAYER_SPEED = "playerSpeed";
     const string F_PLAYER_HORIZONTAL = "playerHorizontal";
     const string F_PLAYER_VERTICAL = "playerVertical";
+    const string F_IS_STEALING = "isStealing"; 
 
     [Header("References")]
     [SerializeField] PlayerMovement playerMovement;
 
-
     SpriteRenderer spriteRenderer;
     Animator animator;
 
-
     float lastHorizontalDirection = 1f;
-
 
     void Awake()
     {
@@ -56,7 +54,7 @@ public class PlayerAnimator : MonoBehaviour
 
     void HandleSpriteFlip(float speed)
     {
-        if (speed < 0.01f) 
+        if (speed < 0.01f)
         {
             spriteRenderer.flipX = lastHorizontalDirection < 0f;
         }
@@ -64,5 +62,15 @@ public class PlayerAnimator : MonoBehaviour
         {
             spriteRenderer.flipX = false;
         }
+    }
+
+    public void SetIsStealing(bool isStealing)
+    {
+        animator.SetBool(F_IS_STEALING, isStealing);
+    }
+
+    public void OnStealingAnimationEnd()
+    {
+        animator.SetBool(F_IS_STEALING, false);
     }
 }

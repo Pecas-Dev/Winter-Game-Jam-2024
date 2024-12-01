@@ -4,26 +4,24 @@ using UnityEngine;
 public class interactableObject : MonoBehaviour
 {
     [Header("Interaction")]
-    [SerializeField] private GameObject interactionText;
-    [SerializeField] private interactionZone interactionZone;
-    [SerializeField] private Item itemChar;
+    [SerializeField] GameObject interactionText;
+    [SerializeField] interactionZone interactionZone;
+    [SerializeField] Item itemChar;
 
-    private bool interactable;
-    private bool inOriginalState;
+    bool interactable;
+    bool inOriginalState;
 
     [Header("Test Variables")]
     public string state;
 
-
     GameInput gameInput;
-
 
     void Awake()
     {
         interactionText.SetActive(false);
         inOriginalState = true;
 
-        gameInput = FindFirstObjectByType<GameInput>();
+        gameInput = FindObjectOfType<GameInput>();
 
         if (gameInput != null)
         {
@@ -50,7 +48,7 @@ public class interactableObject : MonoBehaviour
         if (interactable)
         {
             state = "interacting";
-            if (inOriginalState == true)
+            if (inOriginalState)
             {
                 interactionText.SetActive(true);
             }
@@ -76,8 +74,18 @@ public class interactableObject : MonoBehaviour
         itemChar.interaction();
         GameManager.instance.player.GetComponent<playerInteraction>().CauseParticles();
 
-        // Make noise at the interaction position
         NoiseManager.MakeNoise(transform.position);
+
+        PlayerAnimator playerAnimator = FindAnyObjectByType<PlayerAnimator>();
+
+        if (playerAnimator != null)
+        {
+            playerAnimator.SetIsStealing(true);
+        }
+        else
+        {
+            Debug.LogWarning("PlayerAnimator not found on the player.");
+        }
 
         if (itemChar.disappear)
         {
