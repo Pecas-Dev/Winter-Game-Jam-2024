@@ -31,18 +31,25 @@ public class objectiveSystem : MonoBehaviour
     public int carpetCount;
     public int presentCount;
     public int originalObjectivesAmount;
-
+    
     [SerializeField] private TextMeshProUGUI[] objectiveText = new TextMeshProUGUI[3];
+    [SerializeField] private GameObject objListGO;
+    [SerializeField] private float objListGOOpenX;
+    [SerializeField] private float objListGOClosedX;
 
-   /* public enum objectivesEnum { ChristamsTree, Cat, Vases, Couch, Carpets, Presents, Milk, Fridge, Toilet, Glogg};
-    objectivesEnum objEnum;*/
+    private float objListGOPosX;
+    private bool objListIsMoving;
+    [SerializeField]  private float moveRate;
+
+    /* public enum objectivesEnum { ChristamsTree, Cat, Vases, Couch, Carpets, Presents, Milk, Fridge, Toilet, Glogg};
+     objectivesEnum objEnum;*/
 
     void Start()
     {
         vaseCount = 0;
         carpetCount = 0;
         presentCount = 0;
-
+        //moveRate = 150f;
         // if you change the string later on, rememebr to change it in all other scripts bcoz its string dependent
         objectivesList.Add(new obj { name = "Set Christmas Tree on fire", conditionMet = false });
         objectivesList.Add(new obj { name = "Steal a cat", conditionMet = false });
@@ -79,6 +86,53 @@ public class objectiveSystem : MonoBehaviour
 
             objectiveText[i].text = text;
             objectivesList.Remove(objectivesList[random]);
+        }
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Q) && objListIsMoving == false)
+        {
+            ShowHideObjectiveList();
+            objListIsMoving = true;
+        }
+
+        if (objListIsMoving == true)
+        {
+            Vector3 tmp = objListGO.transform.localPosition;
+
+            if (objListGOPosX <= objListGO.transform.localPosition.x)
+            {
+                // goes to the left
+                tmp.x -= moveRate * Time.deltaTime;
+
+            } else
+            {
+                tmp.x += moveRate * Time.deltaTime;
+            }
+
+            tmp.x = Mathf.Clamp(tmp.x, objListGOClosedX, objListGOOpenX);
+
+            objListGO.transform.localPosition = tmp;
+
+            if (tmp.x <= objListGOClosedX || tmp.x >= objListGOOpenX) {
+                objListIsMoving = false;
+            }
+        }
+
+
+    }
+
+    private void ShowHideObjectiveList()
+    {
+        //Debug.Log(objListGO.transform.localPosition + " " + objListGO.transform.position);
+        if (objListGO.transform.localPosition.x >= objListGOOpenX)
+        {
+            objListGOPosX = objListGOClosedX;
+        }
+        if (objListGO.transform.localPosition.x <= objListGOClosedX)
+        {
+            objListGOPosX = objListGOOpenX;
         }
     }
 
