@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -12,7 +11,7 @@ public class GameManager : MonoBehaviour
 
     public GameSceneManager gameSceneManager;
 
-    private void Awake()
+    void Awake()
     {
         if (instance != null && instance != this) { Destroy(this); }
         else { instance = this; }
@@ -22,8 +21,7 @@ public class GameManager : MonoBehaviour
 
     public void GameWon()
     {
-        Debug.Log("oh yeah game won");
-        gameSceneManager.LoadWinScene();
+        Debug.Log("Game won!");
+        GameEvents.GameWon();
     }
-
 }
