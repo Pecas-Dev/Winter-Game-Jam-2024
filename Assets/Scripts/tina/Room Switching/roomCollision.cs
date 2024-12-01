@@ -54,6 +54,10 @@ public class roomCollision : MonoBehaviour
                 {
                     rend.color = tmp;
                 }
+                if (roomGO.transform.GetChild(i).gameObject.TryGetComponent<Light>(out Light light))
+                {
+                    light.intensity = tmp.a;
+                }
             }
 
             roomGO.GetComponent<SpriteRenderer>().color = tmp;
@@ -70,6 +74,10 @@ public class roomCollision : MonoBehaviour
                 if (roomGO.transform.GetChild(i).gameObject.TryGetComponent<SpriteRenderer>(out SpriteRenderer rend))
                 {
                     rend.color = tmp;
+                }
+                if (roomGO.transform.GetChild(i).gameObject.TryGetComponent<Light>(out Light light))
+                {
+                    light.intensity = tmp.a;
                 }
             }
 
