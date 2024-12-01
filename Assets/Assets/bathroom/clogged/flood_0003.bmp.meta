@@ -1,16 +1,10 @@
 fileFormatVersion: 2
-guid: 97b5f23ad47bc504fad0efc661fe2236
+guid: 7d5e66b696c08fd4d966c231237d261c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -635786951678377178
-    second: jackets_0
-  - first:
-      213: -893598526990203306
-    second: jackets_1
-  - first:
-      213: -3402184983803674746
-    second: jackets_2
+      213: -6299915815809338074
+    second: flood_0003_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -90,6 +84,19 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
+    buildTarget: Win64
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -119,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: jackets_0
+      name: flood_0003_0
       rect:
         serializedVersion: 2
-        x: 34
-        y: 108
-        width: 48
-        height: 150
+        x: 0
+        y: 0
+        width: 429
+        height: 348
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,52 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 623c160d22b3d27f0800000000000000
-      internalID: -635786951678377178
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jackets_1
-      rect:
-        serializedVersion: 2
-        x: 94
-        y: 66
-        width: 47
-        height: 142
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 656cfeacfdc4993f0800000000000000
-      internalID: -893598526990203306
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jackets_2
-      rect:
-        serializedVersion: 2
-        x: 169
-        y: 25
-        width: 49
-        height: 130
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 68fb63468c209c0d0800000000000000
-      internalID: -3402184983803674746
+      spriteID: 625b1d3a1f33298a0800000000000000
+      internalID: -6299915815809338074
       vertices: []
       indices: 
       edges: []
@@ -197,10 +160,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      jackets_0: -635786951678377178
-      jackets_1: -893598526990203306
-      jackets_2: -3402184983803674746
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
