@@ -59,7 +59,8 @@ public class Item : ScriptableObject
             type == Types.lamp ||
             type == Types.headphones ||
             type == Types.pillow ||
-            type == Types.jewelry )
+            type == Types.jewelry ||
+            type == Types.cat)
         {
             disappear = true;
         }
@@ -116,7 +117,7 @@ public class Item : ScriptableObject
         if (type == Types.cat)
         {
             GameManager.instance.objectiveSyst.OtherConditionMet("Steal a cat");
-            changeState = true;
+            disappear = true;
             return;
         }
         if (type == Types.toilet)
