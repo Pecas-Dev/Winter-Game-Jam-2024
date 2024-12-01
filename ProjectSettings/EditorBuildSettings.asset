@@ -12,11 +12,11 @@ EditorBuildSettings:
     path: Assets/Scenes/Game/Game.unity
     guid: 07b11ba255a60ac48a49e7af6b40f615
   - enabled: 1
-    path: Assets/Scenes/Prototype/Enemy-Player/EnemyPlayer_Prototype.unity
-    guid: 74f6b3ce52915364dbdde3f5ab551259
+    path: Assets/Scenes/Game/Win-Lose/Lose Scene.unity
+    guid: 034e26e69e97b434ba77bda870482299
   - enabled: 1
-    path: Assets/Scenes/Game/Credits/Credits.unity
-    guid: 0e3566f9f7817344f9428e48762a6466
+    path: Assets/Scenes/Game/Win-Lose/Win Scene.unity
+    guid: 3ab3f623f764ea94c8cbb17c99440c2b
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: f55ed866497f2644bbfd2cc57e542b4f, type: 3}
   m_UseUCBPForAssetBundles: 0

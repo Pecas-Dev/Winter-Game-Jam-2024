@@ -30,6 +30,7 @@ public class objectiveSystem : MonoBehaviour
     public int vaseCount;
     public int carpetCount;
     public int presentCount;
+    public int totalCount; 
     public int originalObjectivesAmount;
     
     [SerializeField] private TextMeshProUGUI[] objectiveText = new TextMeshProUGUI[3];
@@ -91,6 +92,8 @@ public class objectiveSystem : MonoBehaviour
 
     private void Update()
     {
+        totalCount = carpetCount + vaseCount + presentCount;
+
         if (Input.GetKeyDown(KeyCode.Q) && objListIsMoving == false)
         {
             ShowHideObjectiveList();

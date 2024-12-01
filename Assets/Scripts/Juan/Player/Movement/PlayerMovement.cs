@@ -14,15 +14,12 @@ public class PlayerMovement : MonoBehaviour
     [Header("Isometric Settings")]
     [SerializeField] float isometricAngle = 45f;
 
-
     bool isWalking = false;
-
+    bool isMovementEnabled = true;
 
     Rigidbody2D playerRigidbody;
 
-
     Vector2 movementInput;
-
     public Vector2 currentVelocity;
     public Vector2 MovementInput => movementInput;
 
@@ -30,12 +27,28 @@ public class PlayerMovement : MonoBehaviour
     {
         playerRigidbody = GetComponent<Rigidbody2D>();
         gameInput = FindFirstObjectByType<GameInput>();
+
+        GameEvents.OnPlayerCaught += DisableMovement;
+        GameEvents.OnTimeRunOut += DisableMovement;
+    }
+
+    void OnDestroy()
+    {
+        GameEvents.OnPlayerCaught -= DisableMovement;
+        GameEvents.OnTimeRunOut -= DisableMovement;
     }
 
     void Update()
     {
-        movementInput = gameInput.MovementInput;
-        movementInput = AdjustInputForIsometric(movementInput);
+        if (isMovementEnabled)
+        {
+            movementInput = gameInput.MovementInput;
+            movementInput = AdjustInputForIsometric(movementInput);
+        }
+        else
+        {
+            movementInput = Vector2.zero;
+        }
     }
 
     void FixedUpdate()
@@ -71,6 +84,13 @@ public class PlayerMovement : MonoBehaviour
         playerRigidbody.linearVelocity = currentVelocity;
 
         isWalking = currentVelocity != Vector2.zero;
+    }
+
+    void DisableMovement()
+    {
+        isMovementEnabled = false;
+        currentVelocity = Vector2.zero;
+        playerRigidbody.linearVelocity = Vector2.zero;
     }
 
     public bool IsWalking()
