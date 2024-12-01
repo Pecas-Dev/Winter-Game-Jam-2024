@@ -143,6 +143,12 @@ public class Item : ScriptableObject
             changeState = true;
             return;
         }
+        if (type == Types.shoes)
+        {
+            GameManager.instance.objectiveSyst.OtherConditionMet("Steal the shoes");
+            changeState = true;
+            return;
+        }
 
 
         /*if (type == "Present")
