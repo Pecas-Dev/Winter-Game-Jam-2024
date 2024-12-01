@@ -28,12 +28,12 @@ public class GameSceneManager : MonoBehaviour
 
     public void LoadWinScene()
     {
-        SceneManager.LoadScene(winScene);
+        SceneManager.LoadSceneAsync(winScene);
     }
 
     public void LoadLoseScene()
     {
-        SceneManager.LoadScene(loseScene);
+        SceneManager.LoadSceneAsync(loseScene);
     }
 
     public void LoadMainMenu()
