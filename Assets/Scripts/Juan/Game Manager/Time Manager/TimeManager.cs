@@ -3,9 +3,9 @@ using UnityEngine;
 public class TimeManager : MonoBehaviour
 {
     [Header("Timer Settings")]
-    [SerializeField] float startingTime = 60f; 
+    [SerializeField] float startingTime = 60f;
 
-    float currentTime; 
+    float currentTime;
 
     void Start()
     {
@@ -21,17 +21,14 @@ public class TimeManager : MonoBehaviour
             currentTime = 0f;
 
             OnTimerEnd();
-
-            enabled = false;
         }
-
     }
 
     void OnTimerEnd()
     {
         Debug.Log("Timer has ended!");
+        GameEvents.TimeRunOut();
     }
-
 
     public float GetCurrentTime()
     {

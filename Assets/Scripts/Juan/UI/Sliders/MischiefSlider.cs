@@ -9,7 +9,10 @@ public class MischiefSlider : MonoBehaviour
 
 
     [Header("Image References (Slider)")]
-    [SerializeField] Image mischiefImage; 
+    [SerializeField] Image mischiefImage;
+
+    [Header("Interactable Objects Reference")]
+    [SerializeField] interactableObject interactableObject;
 
 
     [Header("Slider Settings")]

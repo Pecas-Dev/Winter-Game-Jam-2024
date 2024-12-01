@@ -18,6 +18,9 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] float alertDuration = 2f;
     [SerializeField] float investigateDuration = 3f;
 
+    [Header("Alert/Investigating Indicators")]
+    [SerializeField] GameObject investigatingSymbol;
+    [SerializeField] GameObject alertSymbol;
 
     float alertTimer;
     float investigateTimer;
@@ -27,6 +30,9 @@ public class EnemyAI : MonoBehaviour
     {
         enemyMovement = GetComponent<EnemyMovement>();
         enemyPatrol = GetComponent<EnemyPatrol>();
+
+        investigatingSymbol.SetActive(false);
+        alertSymbol.SetActive(false);
     }
 
     void OnEnable()
@@ -59,12 +65,18 @@ public class EnemyAI : MonoBehaviour
         switch (currentState)
         {
             case State.Patrolling:
+                investigatingSymbol.SetActive(false);
+                alertSymbol.SetActive(false);
                 break;
             case State.Alerted:
                 HandleAlertedState();
+                investigatingSymbol.SetActive(false);
+                alertSymbol.SetActive(true);
                 break;
             case State.Investigating:
                 HandleInvestigatingState();
+                investigatingSymbol.SetActive(true);
+                alertSymbol.SetActive(false);
                 break;
             default:
                 break;
@@ -105,5 +117,11 @@ public class EnemyAI : MonoBehaviour
             Vector2 directionToNoise = (lastHeardNoisePosition - (Vector2)transform.position).normalized;
             enemyMovement.SetMovementInput(directionToNoise);
         }
+    }
+
+    void OnDrawGizmos()
+    {
+        Gizmos.color = Color.yellow; 
+        Gizmos.DrawWireSphere(transform.position, hearingRadius);
     }
 }

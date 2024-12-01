@@ -8,15 +8,14 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] float acceleration = 20f;
     [SerializeField] float deceleration = 10f;
 
-
     Rigidbody2D enemyRigidbody;
-
 
     Vector2 movementInput;
     Vector2 currentVelocity;
 
+    bool isMovementEnabled = true;
 
-    Vector2 facingDirection = Vector2.right; 
+    Vector2 facingDirection = Vector2.right;
 
     public Vector2 MovementInput => movementInput;
     public Vector2 FacingDirection => facingDirection;
@@ -24,6 +23,15 @@ public class EnemyMovement : MonoBehaviour
     void Awake()
     {
         enemyRigidbody = GetComponent<Rigidbody2D>();
+
+        GameEvents.OnPlayerCaught += DisableMovement;
+        GameEvents.OnTimeRunOut += DisableMovement;
+    }
+
+    void OnDestroy()
+    {
+        GameEvents.OnPlayerCaught -= DisableMovement;
+        GameEvents.OnTimeRunOut -= DisableMovement;
     }
 
     void FixedUpdate()
@@ -33,11 +41,18 @@ public class EnemyMovement : MonoBehaviour
 
     public void SetMovementInput(Vector2 input)
     {
-        movementInput = input.normalized;
-
-        if (movementInput.magnitude > 0.01f)
+        if (isMovementEnabled)
         {
-            facingDirection = movementInput;
+            movementInput = input.normalized;
+
+            if (movementInput.magnitude > 0.01f)
+            {
+                facingDirection = movementInput;
+            }
+        }
+        else
+        {
+            movementInput = Vector2.zero;
         }
     }
 
@@ -75,5 +90,12 @@ public class EnemyMovement : MonoBehaviour
         }
 
         enemyRigidbody.linearVelocity = currentVelocity;
+    }
+
+    void DisableMovement()
+    {
+        isMovementEnabled = false;
+        currentVelocity = Vector2.zero;
+        enemyRigidbody.linearVelocity = Vector2.zero;
     }
 }

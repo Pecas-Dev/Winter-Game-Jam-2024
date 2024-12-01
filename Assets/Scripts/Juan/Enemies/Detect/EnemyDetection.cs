@@ -8,15 +8,8 @@ public class EnemyDetection : MonoBehaviour
     [SerializeField][Range(0, 360)] float viewAngle = 90f;
     [SerializeField] LayerMask targetMask;
 
-
-    //public LayerMask obstructionMask; // Layer mask for obstacles in case it is possible to add it later for hiding mechanics
-
-
     EnemyMovement enemyMovement;
-
-
     Transform player;
-
 
     void Awake()
     {
@@ -43,7 +36,6 @@ public class EnemyDetection : MonoBehaviour
         }
 
         Vector2 directionToPlayer = (player.position - transform.position).normalized;
-
         float distanceToPlayer = Vector2.Distance(transform.position, player.position);
 
         if (distanceToPlayer <= viewRadius)
@@ -57,11 +49,8 @@ public class EnemyDetection : MonoBehaviour
                 if (hit)
                 {
                     Debug.Log("Player detected!");
+                    GameEvents.PlayerCaught(); // Invoke the event
                 }
-            }
-            else
-            {
-                // Outside of field of view
             }
         }
     }

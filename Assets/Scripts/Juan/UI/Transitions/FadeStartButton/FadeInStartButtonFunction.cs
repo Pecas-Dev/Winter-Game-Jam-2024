@@ -61,6 +61,8 @@ public class FadeInStartButtonFunction : MonoBehaviour
 
         fadeImage.color = endColor;
 
+        yield return new WaitForSeconds(2.0f);
+
         gameSceneManager.LoadGameScene();
     }
 }
