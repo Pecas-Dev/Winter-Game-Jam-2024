@@ -42,8 +42,25 @@ public class objectiveSystem : MonoBehaviour
     private bool objListIsMoving;
     [SerializeField]  private float moveRate;
 
+
+    GameInput gameInput;
+
     /* public enum objectivesEnum { ChristamsTree, Cat, Vases, Couch, Carpets, Presents, Milk, Fridge, Toilet, Glogg};
      objectivesEnum objEnum;*/
+
+    void Awake()
+    {
+        gameInput = FindFirstObjectByType<GameInput>();
+
+        if (gameInput != null)
+        {
+            gameInput.OnInventoryPerformed += OnInventoryPerformed;
+        }
+        else
+        {
+            Debug.LogWarning("GameInput not found in the scene.");
+        }
+    }
 
     void Start()
     {
@@ -90,15 +107,18 @@ public class objectiveSystem : MonoBehaviour
         }
     }
 
+
+    void OnDestroy()
+    {
+        if (gameInput != null)
+        {
+            gameInput.OnInventoryPerformed -= OnInventoryPerformed;
+        }
+    }
+
     private void Update()
     {
         totalCount = carpetCount + vaseCount + presentCount;
-
-        if (Input.GetKeyDown(KeyCode.Q) && objListIsMoving == false)
-        {
-            ShowHideObjectiveList();
-            objListIsMoving = true;
-        }
 
         if (objListIsMoving == true)
         {
@@ -125,6 +145,16 @@ public class objectiveSystem : MonoBehaviour
 
 
     }
+
+    void OnInventoryPerformed()
+    {
+        if (!objListIsMoving)
+        {
+            ShowHideObjectiveList();
+            objListIsMoving = true;
+        }
+    }
+
 
     private void ShowHideObjectiveList()
     {
