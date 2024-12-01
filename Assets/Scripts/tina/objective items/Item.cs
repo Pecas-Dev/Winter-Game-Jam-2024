@@ -15,7 +15,7 @@ public class Item : ScriptableObject
     // 10 chug their glogg
 
     public enum Types 
-    { christmasTree, vase, carpet, present, milkncookies, cat, toilet, couch, fridge, glogg,
+    { christmasTree, vase, carpet, present, milkncookies, cat, toilet, couch, fridge, glogg, shoes,
         candles, wallet, chinaSet, lamp, headphones, pillow, jewelry }
     public Types type;
     
