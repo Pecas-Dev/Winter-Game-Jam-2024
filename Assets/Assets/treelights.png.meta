@@ -144,6 +144,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -534,7 +547,24 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      treelights_0: 7438590946417466239
+      treelights_1: -2640727602454390576
+      treelights_10: 1022068884548135721
+      treelights_11: 4006053690469006765
+      treelights_12: -9158564231313446287
+      treelights_13: 261593576807761592
+      treelights_14: 8349029925210354761
+      treelights_15: 4600496523127640479
+      treelights_16: -1509400671346951447
+      treelights_2: -3429721895128822581
+      treelights_3: -4751103853665970392
+      treelights_4: -863076780900734502
+      treelights_5: 6023977999147131612
+      treelights_6: 6829862169577573804
+      treelights_7: 3467108352145976962
+      treelights_8: 1512957275974671738
+      treelights_9: 6329396372810417468
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -114,6 +114,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -284,7 +297,14 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      firenotree_0006_0: 2236775810056391678
+      firenotree_0006_1: 5626388444101910308
+      firenotree_0006_2: 5710831467529816480
+      firenotree_0006_3: 7074894658592662296
+      firenotree_0006_4: 2236630879751655530
+      firenotree_0006_5: 5887872592621372839
+      firenotree_0006_6: 7302845379212645892
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
