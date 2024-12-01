@@ -17,13 +17,13 @@ public class GameManager : MonoBehaviour
         if (instance != null && instance != this) { Destroy(this); }
         else { instance = this; }
 
-
+        gameSceneManager = FindAnyObjectByType<GameSceneManager>();
     }
 
     public void GameWon()
     {
         Debug.Log("oh yeah game won");
-        gameSceneManager.LoadCreditsScene();
+        gameSceneManager.LoadWinScene();
     }
 
 }
