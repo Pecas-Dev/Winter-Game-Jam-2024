@@ -4,11 +4,17 @@ public class playerInteraction : MonoBehaviour
 {
     private bool causedChange = false;
 
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("InteractionZone"))
         {
             collision.GetComponent<interactionZone>().isInteractedWith = true;
+        }
+
+        if (collision.CompareTag("Room"))
+        {
+            collision.GetComponent<roomCollision>().OnRoomEnter();
         }
     }
 
@@ -17,6 +23,10 @@ public class playerInteraction : MonoBehaviour
         if (collision.CompareTag("InteractionZone"))
         {
             collision.GetComponent<interactionZone>().isInteractedWith = false;
+        }
+        if (collision.CompareTag("Room"))
+        {
+            collision.GetComponent<roomCollision>().OnRoomExit();
         }
     }
 
