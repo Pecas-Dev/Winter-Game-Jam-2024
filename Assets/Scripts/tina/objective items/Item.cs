@@ -26,7 +26,7 @@ public class Item : ScriptableObject
     public Sprite changed;
     public bool isObjective;
 
-    private void Awake()
+    private void Start()
     {
         disappear = false;
         changeState = false;

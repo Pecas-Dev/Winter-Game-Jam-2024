@@ -1,22 +1,16 @@
 fileFormatVersion: 2
-guid: 6f86776f82709b8478ac3c69b335662f
+guid: 23ae8abdfdc8fb949b5a1a235d65e47e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4697362271186375477
-    second: livingroom_couch_rip_0
+      213: 7100639551531418288
+    second: leftwall_0
   - first:
-      213: 5350405809055115781
-    second: livingroom_couch_rip_1
+      213: -8072201028645389804
+    second: leftwall_1
   - first:
-      213: -528040662194163558
-    second: livingroom_couch_rip_2
-  - first:
-      213: 5552350855499449670
-    second: livingroom_couch_rip_3
-  - first:
-      213: 2220097118466396770
-    second: livingroom_couch_rip_4
+      213: -4852013898436177799
+    second: leftwall_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -58,7 +52,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -84,6 +78,19 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Win64
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -125,13 +132,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: livingroom_couch_rip_0
+      name: leftwall_0
       rect:
         serializedVersion: 2
-        x: 50
-        y: 41
-        width: 438
-        height: 388
+        x: 444
+        y: 540
+        width: 522
+        height: 519
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,20 +147,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bcc2d9ce6ed9fceb0800000000000000
-      internalID: -4697362271186375477
+      spriteID: 0b28e132d0a8a8260800000000000000
+      internalID: 7100639551531418288
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: livingroom_couch_rip_1
+      name: leftwall_1
       rect:
         serializedVersion: 2
-        x: 400
-        y: 329
-        width: 90
-        height: 43
+        x: 464
+        y: 286
+        width: 13
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -162,20 +169,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 50aaae45cb5704a40800000000000000
-      internalID: 5350405809055115781
+      spriteID: 41a7c0ccee7c9ff80800000000000000
+      internalID: -8072201028645389804
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: livingroom_couch_rip_2
+      name: leftwall_2
       rect:
         serializedVersion: 2
-        x: 491
-        y: 294
-        width: 19
-        height: 17
+        x: 626
+        y: 269
+        width: 114
+        height: 242
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,52 +191,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a9074feb0d50ca8f0800000000000000
-      internalID: -528040662194163558
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: livingroom_couch_rip_3
-      rect:
-        serializedVersion: 2
-        x: 542
-        y: 236
-        width: 11
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 645816a7fa9ed0d40800000000000000
-      internalID: 5552350855499449670
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: livingroom_couch_rip_4
-      rect:
-        serializedVersion: 2
-        x: 555
-        y: 233
-        width: 35
-        height: 27
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 262de01119e5fce10800000000000000
-      internalID: 2220097118466396770
+      spriteID: 9701472011f2aacb0800000000000000
+      internalID: -4852013898436177799
       vertices: []
       indices: 
       edges: []
@@ -238,7 +201,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -247,12 +210,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      livingroom_couch_rip_0: -4697362271186375477
-      livingroom_couch_rip_1: 5350405809055115781
-      livingroom_couch_rip_2: -528040662194163558
-      livingroom_couch_rip_3: 5552350855499449670
-      livingroom_couch_rip_4: 2220097118466396770
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
