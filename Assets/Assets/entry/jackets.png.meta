@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream
 guid: 97b5f23ad47bc504fad0efc661fe2236
+=======
+guid: c830a4a9f89449e459e13b52214ea896
+>>>>>>> Stashed changes
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -102,6 +106,7 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+<<<<<<< Updated upstream
   - serializedVersion: 4
     buildTarget: WebGL
     maxTextureSize: 2048
@@ -115,6 +120,8 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+=======
+>>>>>>> Stashed changes
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -198,9 +205,13 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
+<<<<<<< Updated upstream
       jackets_0: -635786951678377178
       jackets_1: -893598526990203306
       jackets_2: -3402184983803674746
+=======
+      eep_0000_0: -5702709384180337381
+>>>>>>> Stashed changes
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

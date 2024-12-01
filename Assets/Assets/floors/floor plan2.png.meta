@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream
 guid: c405c8f4e1050664f9267b825d95b1f7
+=======
+guid: e5fd57760213be64592da60e2145cd85
+>>>>>>> Stashed changes
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -46,7 +50,11 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
+<<<<<<< Updated upstream
   spriteMode: 1
+=======
+  spriteMode: 2
+>>>>>>> Stashed changes
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -84,6 +92,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
+<<<<<<< Updated upstream
     buildTarget: Win64
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -97,6 +106,8 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
+=======
+>>>>>>> Stashed changes
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -109,6 +120,7 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+<<<<<<< Updated upstream
   - serializedVersion: 4
     buildTarget: WebGL
     maxTextureSize: 2048
@@ -122,6 +134,8 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+=======
+>>>>>>> Stashed changes
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -151,7 +165,11 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
+<<<<<<< Updated upstream
     spriteID: 5e97eb03825dee720800000000000000
+=======
+    spriteID: 
+>>>>>>> Stashed changes
     internalID: 0
     vertices: []
     indices: 
@@ -160,8 +178,12 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
+<<<<<<< Updated upstream
     nameFileIdTable:
       floor plan2_0: 5049748023059049458
+=======
+    nameFileIdTable: {}
+>>>>>>> Stashed changes
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

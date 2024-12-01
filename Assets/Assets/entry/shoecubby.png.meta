@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream
 guid: 4a58cdbe4d257cf418dba4f05c57bd87
+=======
+guid: 0e6302184f4f88c48bd850c38fc10615
+>>>>>>> Stashed changes
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -111,6 +115,7 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+<<<<<<< Updated upstream
   - serializedVersion: 4
     buildTarget: WebGL
     maxTextureSize: 2048
@@ -124,6 +129,8 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+=======
+>>>>>>> Stashed changes
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -272,6 +279,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
+<<<<<<< Updated upstream
     nameFileIdTable:
       shoecubby_0: -2980877393228502864
       shoecubby_1: -2763652926129891738
@@ -279,6 +287,9 @@ TextureImporter:
       shoecubby_3: -8760695546151524364
       shoecubby_4: 2330608872894098198
       shoecubby_5: -8836548037283312757
+=======
+    nameFileIdTable: {}
+>>>>>>> Stashed changes
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

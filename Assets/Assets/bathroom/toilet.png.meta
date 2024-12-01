@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream
 guid: 70a0ce7d7769f9643b4536edb5143199
+=======
+guid: ffc04f12c85524e41aa592c0de95f283
+>>>>>>> Stashed changes
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -99,6 +103,7 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+<<<<<<< Updated upstream
   - serializedVersion: 4
     buildTarget: WebGL
     maxTextureSize: 2048
@@ -112,6 +117,8 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+=======
+>>>>>>> Stashed changes
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -173,8 +180,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
+<<<<<<< Updated upstream
       toilet_0: -8243884347342347663
       toilet_1: -4879703352707559730
+=======
+      eep_0003_0: 384878200649559185
+>>>>>>> Stashed changes
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
